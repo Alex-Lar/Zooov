@@ -1,0 +1,18 @@
+/* Error: expected ":".
+ *    ,
+ * 46 |     base: 'Montserrat', sans-serif,
+ *    |                                   ^
+ *    '
+ *   public\scss\utils\_vars.scss 46:35  @import
+ *   public\scss\main.scss 1:9           root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: expected \":\".\a    \2577 \a 46 \2502      base: 'Montserrat', sans-serif,\d\a    \2502                                    ^\a    \2575 \a   public\\scss\\utils\\_vars.scss 46:35  @import\a   public\\scss\\main.scss 1:9           root stylesheet";
+}

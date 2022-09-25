@@ -1,0 +1,26 @@
+.container {
+    max-width: containerWidth(lg);
+    width: 100%;
+    margin: 0 auto; 
+
+    @include smallDesctop {
+        max-width: containerWidth(md);
+    }
+
+    @include tablet {
+        max-width: containerWidth(sm);
+    }
+
+    @include mobile {
+        max-width: none;
+    }
+}
+
+
+
+body {
+    font-family: fontFamily(heading);
+    // font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}

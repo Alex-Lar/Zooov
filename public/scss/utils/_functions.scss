@@ -1,0 +1,35 @@
+// ----------------------------------
+// Retrieve Colors 
+// Usage: getColor(typography, white)
+// Usage: getColor(typography, grey, 3) 
+
+@function color($elem, $variant, $subvariant) {
+    @if ($subvariant) {
+        @return map-get(map-get(map-get($colors, $elem), $variant), $subvariant);
+    };
+	@return map-get(map-get($colors, $elem), $variant);
+};
+
+// ----------------------------------
+// Retrieve Breakpoints 
+// Usage: getBreakpoint(lg)
+
+@function breakpoint($variant) {
+    @return map-get($breakpoints, $variant);
+};
+
+// ----------------------------------
+// Retrieve Container Width 
+// Usage: getContainerWidth(md)
+
+@function containerWidth($variant) {
+    @return map-get($containers, $variant);
+};
+
+// ----------------------------------
+// Retrieve Font Family
+// Usage: fontFamily(base)
+
+@function fontFamily($variant) {
+    @return map-get($font__family, $variant);
+};

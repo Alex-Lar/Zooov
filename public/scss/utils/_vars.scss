@@ -1,0 +1,50 @@
+// Container
+$containers: (
+    sm: 540 + px,
+    md: 720 + px,
+    lg: 1200 + px
+);
+
+// Breakpoints
+$breakpoints: (
+    sm: 575.98 + px,
+    md: 767.98 + px,
+    lg: 991.98 + px,
+);
+
+
+// Colors
+$colors: (
+    typography: (
+        white: #FFFFFF,
+        black: #000000,
+        grey: (
+            1: #434242,
+            2: #635D5D,
+            3: #9F9E9D,
+        ),
+        red: (
+            1: #961914,
+            2: #EC7973,
+        ),
+    ),
+    bg: (
+        white: (
+            1: #FFFFFF,  
+            2: #FFF4F3,
+        ),
+        red: (
+            1: #EAD1D0,
+            2: #961914,
+            3: #69120E,
+        )
+    )
+);
+
+// Font family
+$font__family: (
+    base: 'Montserrat', sans-serif,
+    heading: 'Oswald', sans-serif
+)
+
+
