@@ -16,8 +16,10 @@ $breakpoints: (
 // Colors
 $colors: (
     typography: (
-        white: #FFFFFF,
-        black: #000000,
+        main: (
+            1: #FFFFFF,
+            2: #000000,
+        ),
         grey: (
             1: #434242,
             2: #635D5D,
@@ -34,17 +36,21 @@ $colors: (
             2: #FFF4F3,
         ),
         red: (
-            1: #EAD1D0,
-            2: #961914,
-            3: #69120E,
-        )
+            1: #75110D,
+        ),
+        boilerplate: #cd9c9b,
+    ),
+    primary: (
+        1: #961914,
+        2: #69120E, 
+        3: #EAD1D0,
     )
 );
 
 // Font family
 $font__family: (
-    base: 'Montserrat', sans-serif,
-    heading: 'Oswald', sans-serif
+    base: "'Montserrat', sans-serif",
+    heading: "'Oswald', sans-serif"
 )
 
 

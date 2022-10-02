@@ -1,0 +1,33 @@
+@mixin mobile {
+    @media (max-width: breakpoint(sm)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: breakpoint(md)) {
+        @content;
+    }
+}
+
+@mixin small-desctop {
+    @media (max-width: breakpoint(lg)) {
+        @content;
+    }
+}
+
+@mixin flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin font-family($elem) {
+	font-family: unquote(get-font-family($elem));
+}
+
+@mixin moz-specific-style {
+    @-moz-document url-prefix() {
+        @content;
+    }
+}

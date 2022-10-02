@@ -1,0 +1,46 @@
+.nav {
+    @include flex-between-center;
+}
+
+.nav-logo {
+    width: 80px;
+    height: 80px;
+}
+
+.nav-logo a {
+    border-radius: 2px;
+    width: 80px;
+    height: 80px;
+    display:inline-block;
+}
+
+.nav-list {
+    @include font-family(base);
+    font-size: 1em;
+    font-weight: 500;
+
+    @include flex-between-center;
+    width: 100%;
+    max-width: 744px;
+    &__item a {
+        color: color(typography, main, 1);
+        text-decoration: none;
+        border-radius: 2px;
+    }
+
+    &__item a:hover {
+        border-bottom: 2px solid color(typography, main, 1);
+    }
+}
+
+.nav-list.onscroll a {
+    color: color(typography, main, 2);
+}
+
+.nav-list.onscroll a:hover {
+    border-bottom: 2px solid color(typography, red, 1);
+}
+
+.nav-list:last-child {
+    margin-right: 22px;
+}

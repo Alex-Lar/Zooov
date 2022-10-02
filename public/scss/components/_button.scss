@@ -1,0 +1,18 @@
+.btn {
+    padding: 13px 42px;
+    border-radius: .5rem;
+    @include font-family(base);
+
+    cursor: pointer;
+}
+
+.btn.btn-primary {
+    align-self: start; 
+    color: color(typography, main, 1);
+    background-color: color(primary, 1);
+    font-weight: 600;
+
+    &:hover {
+        background-color: color(bg, red, 1);
+    }
+}   

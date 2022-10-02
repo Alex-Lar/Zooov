@@ -1,11 +1,17 @@
-@import "./utils/vars",
-        "./utils/functions",
-        "./utils/mixins";
+@import "./abstracts/vars",
+        "./abstracts/functions",
+        "./abstracts/mixins";
 
-@import "./base/reset",
+@import "./base/normalize",
         "./base/fonts",
         "./base/global";
 
+
+
+@import "./components/button";
+
+@import "./layout/header";
 @import "./layout/navbar";
+@import "./layout/hero";
 
 

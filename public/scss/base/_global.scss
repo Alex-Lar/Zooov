@@ -1,14 +1,14 @@
 .container {
-    max-width: containerWidth(lg);
     width: 100%;
-    margin: 0 auto; 
+    max-width: container-width(lg);
+	margin: 0 auto;
 
-    @include smallDesctop {
-        max-width: containerWidth(md);
+    @include small-desctop {
+        max-width: container-width(md);
     }
 
     @include tablet {
-        max-width: containerWidth(sm);
+        max-width: container-width(sm);
     }
 
     @include mobile {
@@ -16,11 +16,8 @@
     }
 }
 
-
-
-body {
-    font-family: fontFamily(heading);
-    // font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-}
+// body {
+//     @include font-family(base);
+//     font-weight: 400;
+//     font-size: 16px;
+// }

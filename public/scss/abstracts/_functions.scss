@@ -3,11 +3,11 @@
 // Usage: getColor(typography, white)
 // Usage: getColor(typography, grey, 3) 
 
-@function color($elem, $variant, $subvariant) {
+@function color($elem, $variant, $subvariant: false) {
     @if ($subvariant) {
         @return map-get(map-get(map-get($colors, $elem), $variant), $subvariant);
-    };
-	@return map-get(map-get($colors, $elem), $variant);
+    }
+    @return map-get(map-get($colors, $elem), $variant);
 };
 
 // ----------------------------------
@@ -22,14 +22,14 @@
 // Retrieve Container Width 
 // Usage: getContainerWidth(md)
 
-@function containerWidth($variant) {
+@function container-width($variant) {
     @return map-get($containers, $variant);
 };
 
 // ----------------------------------
 // Retrieve Font Family
-// Usage: fontFamily(base)
+// Usage: @include font-family(base);
 
-@function fontFamily($variant) {
-    @return map-get($font__family, $variant);
-};
+@function get-font-family($elem) {
+	@return map-get($font__family, $elem);
+}
