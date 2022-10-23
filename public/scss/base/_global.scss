@@ -15,10 +15,6 @@
         max-width: none;
         padding: 0 24px;
     }
-    @include mobile-xs {
-        max-width: none;
-        padding: 0 20px;
-    }
 }
 
 body {
@@ -27,9 +23,6 @@ body {
     font-size: 16px;
 
     @include mobile {
-        overflow-x: hidden;
-    }
-    @include mobile-xs {
         overflow-x: hidden;
     }
 }

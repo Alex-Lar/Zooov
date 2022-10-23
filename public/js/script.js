@@ -31,13 +31,12 @@ burgerBtn.addEventListener('keyup', keyboardFocus);
 window.addEventListener('load', textWrapOnload);
 window.addEventListener('resize', defineTextWrapping);
 
+let isDesctop = checkDeviceType('desctop');
 const screenSizes = {
-    xs: 374.98,
     sm: 575.98,
     md: 767.98,
     lg: 991.98,
 }
-let isDesctop = checkDeviceType('desctop');
 
 function textWrapOnload() {
     const deviceType = checkDeviceType('desctop')?'desctop':'mobile';
@@ -48,11 +47,11 @@ function textWrapOnload() {
 function defineTextWrapping() {
     const screenWidth = window.innerWidth;
 
-    if (screenWidth >= screenSizes.md && !isDesctop) {
+    if (screenWidth >= screenSizes.sm && !isDesctop) {
         isDesctop = true;
         updateTitleWrapping('desctop');
     } 
-    if (screenWidth < screenSizes.md && isDesctop) {
+    if (screenWidth < screenSizes.sm && isDesctop) {
         isDesctop = false;
         updateTitleWrapping('mobile');
     }
@@ -81,12 +80,12 @@ function updateTitleWrapping(type) {
 function checkDeviceType(type) {
     switch (type) {
         case 'desctop':
-            if (window.innerWidth >= screenSizes.md) return true;
-            if (window.innerWidth < screenSizes.md) return false;
+            if (window.innerWidth >= screenSizes.sm) return true;
+            if (window.innerWidth < screenSizes.sm) return false;
             break;
         case 'mobile':
-            if (window.innerWidth < screenSizes.md) return true;
-            if (window.innerWidth >= screenSizes.md) return false;
+            if (window.innerWidth < screenSizes.sm) return true;
+            if (window.innerWidth >= screenSizes.sm) return false;
             break;
         default:
             console.log('Something is not good!');

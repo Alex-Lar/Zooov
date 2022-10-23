@@ -27,15 +27,6 @@
                 bottom: 12.5rem;
             }
         }
-        @include mobile-xs {
-            width: 100px;
-            height: 334px;
-            bottom: 10.5rem;
-
-            @include moz-specific-style {
-                bottom: 12.5rem;
-            }
-        }
     }
 
     &-inner {
@@ -49,7 +40,7 @@
         &__title {
             position: relative;
             z-index: 10;
-            width: 85%;
+            width: 100%;
 
             @include font-family(heading);
             font-weight: 700;
@@ -59,21 +50,14 @@
             align-self: baseline;
 
             @include mobile {
-                width: 310px;
-                font-size: 42px;
-                line-height: 57px;
+                width: clamp(320px, 100%, 460px);
+                font-size: clamp(2rem, 7vw + 1rem, 4rem); 
+                line-height: clamp(55px, 12vw, 70px);
                 letter-spacing: normal;
                 @include moz-specific-style {
-                   
-                }
-            }
-            @include mobile-xs {
-                width: 300px;
-                font-size: 38px;
-                line-height: 52px;
-                letter-spacing: normal;
-                @include moz-specific-style {
-                    
+                    width: clamp(310px, 100%, 410px);
+                    font-size: clamp(2.7rem, 8vw + 1rem, 4rem); 
+                    line-height: clamp(55px, 15vw, 70px);
                 }
             }
 
@@ -90,9 +74,9 @@
                     width: fit-content;
                     
                     @include moz-specific-style {
-                        top: -9%;
-                        right: -12%;
-                        width: 123%;
+                        top: -11%;
+                        right: -14%;
+                        width: 124%;
                         transform: none;
                     }
                 }
@@ -111,11 +95,6 @@
                 width: 200px;
                 font-size: 18px;
                 line-height: 25px;
-            }
-            @include mobile-xs {
-                width: 220px;
-                font-size: 16px;
-                line-height: 23px;
             }
         }
     }

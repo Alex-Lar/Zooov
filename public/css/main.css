@@ -295,12 +295,6 @@ template {
     padding: 0 24px;
   }
 }
-@media (max-width: 374.98px) {
-  .container {
-    max-width: none;
-    padding: 0 20px;
-  }
-}
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -308,11 +302,6 @@ body {
   font-size: 16px;
 }
 @media (max-width: 575.98px) {
-  body {
-    overflow-x: hidden;
-  }
-}
-@media (max-width: 374.98px) {
   body {
     overflow-x: hidden;
   }
@@ -528,18 +517,6 @@ section.section {
     }
   }
 }
-@media (max-width: 374.98px) {
-  .hero__stroke-img {
-    width: 100px;
-    height: 334px;
-    bottom: 10.5rem;
-  }
-  @-moz-document url-prefix() {
-    .hero__stroke-img {
-      bottom: 12.5rem;
-    }
-  }
-}
 .hero-inner {
   display: flex;
   justify-content: space-between;
@@ -551,7 +528,7 @@ section.section {
 .hero-inner__title {
   position: relative;
   z-index: 10;
-  width: 85%;
+  width: 100%;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 54px;
@@ -561,21 +538,18 @@ section.section {
 }
 @media (max-width: 575.98px) {
   .hero-inner__title {
-    width: 310px;
-    font-size: 42px;
-    line-height: 57px;
+    width: clamp(320px, 100%, 460px);
+    font-size: clamp(2rem, 7vw + 1rem, 4rem);
+    line-height: clamp(55px, 12vw, 70px);
     letter-spacing: normal;
   }
-  @-moz-document url-prefix() {}
-}
-@media (max-width: 374.98px) {
-  .hero-inner__title {
-    width: 300px;
-    font-size: 38px;
-    line-height: 52px;
-    letter-spacing: normal;
+  @-moz-document url-prefix() {
+    .hero-inner__title {
+      width: clamp(310px, 100%, 410px);
+      font-size: clamp(2.7rem, 8vw + 1rem, 4rem);
+      line-height: clamp(55px, 15vw, 70px);
+    }
   }
-  @-moz-document url-prefix() {}
 }
 .hero-inner__title .outline-wrapper {
   position: relative;
@@ -590,9 +564,9 @@ section.section {
 }
 @-moz-document url-prefix() {
   .hero-inner__title .outline-wrapper .outline {
-    top: -9%;
-    right: -12%;
-    width: 123%;
+    top: -11%;
+    right: -14%;
+    width: 124%;
     transform: none;
   }
 }
@@ -609,13 +583,6 @@ section.section {
     width: 200px;
     font-size: 18px;
     line-height: 25px;
-  }
-}
-@media (max-width: 374.98px) {
-  .hero-inner__subtitle {
-    width: 220px;
-    font-size: 16px;
-    line-height: 23px;
   }
 }
 
