@@ -28,8 +28,8 @@ burgerBtn.addEventListener('keyup', keyboardFocus);
 
 
 // Word Wrap
-window.addEventListener('load', getScreenSize);
-window.addEventListener('resize', getScreenSize);
+window.addEventListener('load', textWrapOnload);
+window.addEventListener('resize', defineTextWrapping);
 
 const screenSizes = {
     xs: 374.98,
@@ -39,9 +39,15 @@ const screenSizes = {
 }
 let isDesctop = checkDeviceType('desctop');
 
-function getScreenSize() {
+function textWrapOnload() {
+    const deviceType = checkDeviceType('desctop')?'desctop':'mobile';
+    isDesctop = deviceType === 'desctop' ? true : false;
+    updateTitleWrapping(deviceType);
+}
+
+function defineTextWrapping() {
     const screenWidth = window.innerWidth;
-    
+
     if (screenWidth >= screenSizes.md && !isDesctop) {
         isDesctop = true;
         updateTitleWrapping('desctop');

@@ -34,17 +34,3 @@ body {
     }
 }
 
-// .text-wrapping::before {
-//     content: "";
-//     display: block;
-
-//     @include mobile-xs {
-//         display: none;
-//     }
-// }
-
-// .text-wrapping.mobile-disable::before {
-//     @include mobile {
-//         display: none;
-//     }
-// }

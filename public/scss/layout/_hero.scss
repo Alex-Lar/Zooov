@@ -79,6 +79,23 @@
 
             .outline-wrapper {
                 position: relative;
+
+                .outline {
+                    display: inline;
+                    position: absolute;
+                    top: -2%;
+                    z-index: -10;
+                
+                    transform: translateX(67%);
+                    width: fit-content;
+                    
+                    @include moz-specific-style {
+                        top: -9%;
+                        right: -12%;
+                        width: 123%;
+                        transform: none;
+                    }
+                }
             }
         }
 
@@ -101,19 +118,5 @@
                 line-height: 23px;
             }
         }
-    }
-}
-
-.outline {
-    display: inline;
-    position: absolute;
-    top: -5%;
-    right: -16%;
-    z-index: -10;
-
-    @include moz-specific-style {
-        top: -9%;
-        right: -12%;
-        width: 123%;
     }
 }
