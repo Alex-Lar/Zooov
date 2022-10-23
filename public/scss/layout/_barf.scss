@@ -1,0 +1,103 @@
+.barf {
+    &-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        width: 100%;
+    }
+
+    &__item {
+        width: 48%;
+        height: auto;
+        margin-bottom: 80px;
+    }
+
+    &__item.info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__item.img {
+        img {
+            width: 100%;
+            height: 523px;
+            object-fit: cover;
+            object-position: bottom;
+        }
+    }
+
+    &__item.diet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        width: 100%;
+        height: auto;
+        padding: 32px 80px;
+        margin-bottom: 80px;
+
+        background: url("/img/barf/diet_line_hr.png") center no-repeat;
+        background-color: color(primary, 3);
+
+        @include mobile {
+            background: url("/img/barf/diet_line_vr.png") center no-repeat;
+            background-color: color(primary, 3);
+
+            padding: 56px 49px 72px 49px;
+        }
+
+        .diet__item {
+            width: 48%;
+            height: auto;
+        }
+        .diet-title {
+            @include font-family(base);
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 28px;
+            color: color(typography, main, 2);
+            text-transform: uppercase;
+
+            margin-bottom: 16px;
+        }
+        .diet-list {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 100%;
+            max-height: 200px;
+
+            @include font-family(base);
+            color: color(typography, grey, 1);
+
+            &__item {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 45px;
+            }
+        }
+    }
+
+    &-list {
+
+        &__item {
+            color: color(typography, grey, 1);
+            margin-bottom: 0.8rem;
+        }
+
+        &__item::before {
+            content: "\2022";
+            color: color(primary, 1);
+            font-weight: bold;
+            font-size: 1.6em;
+            display: inline-block;
+            width: 0.6em;
+        }
+    }
+}

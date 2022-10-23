@@ -5,16 +5,26 @@
 .nav-logo {
     width: 80px;
     height: 80px;
+    @include mobile {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .nav-logo a {
     border-radius: 2px;
-    width: 80px;
-    height: 80px;
-    display:inline-block;
+    width: inherit;
+    height: inherit;
+    display: inline-block;
+    img {
+        width: inherit;
+        height: inherit;
+    }
 }
 
 .nav-list {
+    // position: absolute;
+
     @include font-family(base);
     font-size: 1em;
     font-weight: 500;
@@ -30,6 +40,10 @@
 
     &__item a:hover {
         border-bottom: 2px solid color(typography, main, 1);
+    }
+
+    @include tablet {
+        display: none;
     }
 }
 

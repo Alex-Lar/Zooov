@@ -15,8 +15,27 @@
     &__stroke-img {
         position: absolute;
         right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        bottom: 50%;
+        transform: translateY(50%);
+        z-index: 0;
+        @include mobile {
+            width: 100px;
+            height: 334px;
+            bottom: 10.5rem;
+
+            @include moz-specific-style {
+                bottom: 12.5rem;
+            }
+        }
+        @include mobile-xs {
+            width: 100px;
+            height: 334px;
+            bottom: 10.5rem;
+
+            @include moz-specific-style {
+                bottom: 12.5rem;
+            }
+        }
     }
 
     &-inner {
@@ -24,44 +43,77 @@
         flex-direction: column;
         gap: 25px;
 
-        width: 100%;
-        max-width: 450px;
+        // width: 100%;
         color: color(typography, main, 1);
 
         &__title {
             position: relative;
             z-index: 10;
+            width: 85%;
+
             @include font-family(heading);
             font-weight: 700;
             font-size: 54px;
             line-height: 70px;
             letter-spacing: 0.02em;
+            align-self: baseline;
+
+            @include mobile {
+                width: 310px;
+                font-size: 42px;
+                line-height: 57px;
+                letter-spacing: normal;
+                @include moz-specific-style {
+                   
+                }
+            }
+            @include mobile-xs {
+                width: 300px;
+                font-size: 38px;
+                line-height: 52px;
+                letter-spacing: normal;
+                @include moz-specific-style {
+                    
+                }
+            }
+
+            .outline-wrapper {
+                position: relative;
+            }
         }
-        &__title span {
-            position: relative;
-            z-index: 10000;
-        }
+
         &__subtitle {
             @include font-family(base);
             font-weight: 400;
             font-size: 20px;
             line-height: 28px;
             opacity: 0.8;
-
             align-self: baseline;
+
+            @include mobile {
+                width: 200px;
+                font-size: 18px;
+                line-height: 25px;
+            }
+            @include mobile-xs {
+                width: 220px;
+                font-size: 16px;
+                line-height: 23px;
+            }
         }
     }
 }
 
 .outline {
+    display: inline;
     position: absolute;
-    top: 30%;
-    right: 1%;
+    top: -5%;
+    right: -16%;
     z-index: -10;
-    
+
     @include moz-specific-style {
-        top: 27%;
-        right: 11%;
-        width: 54%;
+        top: -9%;
+        right: -12%;
+        width: 123%;
     }
 }

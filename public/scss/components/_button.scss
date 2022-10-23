@@ -1,17 +1,18 @@
-.btn {
+.btn-link {
+    @include font-family(base);
     padding: 13px 42px;
     border-radius: .5rem;
-    @include font-family(base);
-
+    text-decoration: none;
     cursor: pointer;
+    z-index: 1;
 }
 
-.btn.btn-primary {
+.btn-link.primary {
     align-self: start; 
     color: color(typography, main, 1);
     background-color: color(primary, 1);
     font-weight: 600;
-
+    transition: background-color .3s ease;
     &:hover {
         background-color: color(bg, red, 1);
     }

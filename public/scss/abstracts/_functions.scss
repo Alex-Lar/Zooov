@@ -1,7 +1,7 @@
 // ----------------------------------
 // Retrieve Colors 
-// Usage: getColor(typography, white)
-// Usage: getColor(typography, grey, 3) 
+// Usage: color(typography, white)
+// Usage: color(typography, grey, 3) 
 
 @function color($elem, $variant, $subvariant: false) {
     @if ($subvariant) {
@@ -12,7 +12,7 @@
 
 // ----------------------------------
 // Retrieve Breakpoints 
-// Usage: getBreakpoint(lg)
+// Usage: breakpoint(lg)
 
 @function breakpoint($variant) {
     @return map-get($breakpoints, $variant);
@@ -20,7 +20,7 @@
 
 // ----------------------------------
 // Retrieve Container Width 
-// Usage: getContainerWidth(md)
+// Usage: container-width(md)
 
 @function container-width($variant) {
     @return map-get($containers, $variant);
